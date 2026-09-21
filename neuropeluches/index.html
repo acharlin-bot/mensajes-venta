@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Retoma · Neuropeluches</title>
+<style>
+  :root{--bg:#0e1116;--card:#161b23;--line:#2a323e;--mut:#8b95a3;--cob:#f0b429;--ver:#3ddc84;--txt:#dfe4ec}
+  *{box-sizing:border-box;margin:0}
+  body{background:var(--bg);color:var(--txt);font-family:-apple-system,'Segoe UI',Roboto,sans-serif;line-height:1.6}
+  .nav{background:var(--card);border-bottom:1px solid var(--line);padding:14px 0}
+  .wrap{max-width:640px;margin:0 auto;padding:0 18px}
+  .brand{font-weight:700;color:var(--cob);letter-spacing:.4px}
+  h1{font-size:26px;margin-bottom:6px}
+  p.sub{color:var(--mut);font-size:14.5px;margin-bottom:24px}
+  .aviso{background:#231a08;border:1px solid #5a4514;border-radius:5px;padding:13px 16px;font-size:14px;color:#e8c766;margin-bottom:22px}
+  .msg{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:22px;white-space:pre-wrap;font-size:15px;line-height:1.68}
+  .cbtn{width:100%;margin-top:13px;background:var(--cob);color:#1a1206;border:none;border-radius:4px;padding:15px;font-size:15.5px;font-weight:700;cursor:pointer;font-family:inherit}
+  .cbtn.ok{background:var(--ver);color:#052e17}
+  footer{color:var(--mut);font-size:12.5px;text-align:center;padding:34px 0 50px}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="wrap"><span class="brand">Retoma · Neuropeluches</span></div></nav>
+
+<div class="wrap" style="padding-top:30px;padding-bottom:40px">
+  <h1>Mensaje de retoma para Neuropeluches</h1>
+  <p class="sub">Copia y pégalo en el chat de WhatsApp que ya tienes con ellos. Aprieta enviar tú.</p>
+
+  <div class="aviso"><b>Contexto:</b> están en negociación, ofrecida en $190.000 + 20% de comisión con tope $1.200.000. Se les mandó un nudge suave el 24-ago y quedaron en decidir; el plazo que pidieron (27-ago) pasó hace 25 días. Tono suave, sin presión, con puerta de salida amable. CTA: una llamada o audio de 10 minutos.</div>
+
+  <div class="msg" id="msg">Hola, ¿cómo están?
+
+Retomo nomás la conversación que quedó en agosto.
+
+La propuesta sigue disponible tal como la dejamos: https://propuesta-neuropeluches.netlify.app — $190.000 más el 20% de las ventas que genere el catálogo, con tope.
+
+Si les sigue haciendo sentido, feliz de conversar 10 minutos por llamada o audio cuando les acomode. Y si por ahora no es el momento, me dicen y quedamos bien, sin problema.
+
+Un abrazo,
+Mario</div>
+
+  <button class="cbtn" onclick="cp('msg',this)">Copiar mensaje</button>
+</div>
+
+<footer>Privado · Mario Charlin · retoma Neuropeluches 21-sep-2026</footer>
+
+<script>
+  function cp(id, btn){
+    var t = document.getElementById(id).innerText;
+    var done = function(){
+      var o = btn.textContent; btn.textContent = '✓ Copiado';
+      btn.classList.add('ok');
+      setTimeout(function(){ btn.textContent = o; btn.classList.remove('ok'); }, 1900);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(done, function(){ fb(t, done); });
+    } else fb(t, done);
+  }
+  function fb(t, done){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.style.position='fixed'; ta.style.opacity='0';
+    document.body.appendChild(ta); ta.focus(); ta.select();
+    try { document.execCommand('copy'); done(); } catch(e){ alert('Copia manualmente.'); }
+    document.body.removeChild(ta);
+  }
+</script>
+</body>
+</html>
