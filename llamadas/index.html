@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Bloque de llamadas · 4 tratos</title>
+<style>
+  :root{--bg:#0e1116;--card:#161b23;--line:#2a323e;--mut:#8b95a3;--cob:#f0b429;--ver:#3ddc84;--txt:#dfe4ec;--roj:#ff8a8a}
+  *{box-sizing:border-box;margin:0}
+  body{background:var(--bg);color:var(--txt);font-family:-apple-system,'Segoe UI',Roboto,sans-serif;line-height:1.6}
+  .nav{background:var(--card);border-bottom:1px solid var(--line);padding:14px 0}
+  .wrap{max-width:680px;margin:0 auto;padding:0 18px}
+  .brand{font-weight:700;color:var(--cob);letter-spacing:.4px}
+  h1{font-size:26px;margin-bottom:6px}
+  p.sub{color:var(--mut);font-size:14.5px;margin-bottom:22px}
+  .aviso{background:#231a08;border:1px solid #5a4514;border-radius:5px;padding:13px 16px;font-size:14px;color:#e8c766;margin-bottom:24px}
+  .deal{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:20px;margin-bottom:22px}
+  .deal h2{font-size:18.5px;margin-bottom:4px}
+  .meta{color:var(--mut);font-size:13.5px;margin-bottom:12px}
+  .meta b{color:var(--cob)}
+  .tel{display:inline-block;background:var(--cob);color:#1a1206;border-radius:4px;padding:10px 18px;font-weight:700;text-decoration:none;font-size:15px;margin-bottom:12px}
+  .ctx{font-size:14px;color:#b9c2ce;border-left:3px solid var(--line);padding-left:12px;margin-bottom:14px}
+  .msg{background:var(--bg);border:1px solid var(--line);border-radius:5px;padding:18px;white-space:pre-wrap;font-size:14.8px;line-height:1.65}
+  .cbtn{width:100%;margin-top:11px;background:var(--cob);color:#1a1206;border:none;border-radius:4px;padding:14px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit}
+  .cbtn.ok{background:var(--ver);color:#052e17}
+  .warn{background:#2a1215;border:1px solid #5a2a30;border-radius:5px;padding:12px 16px;font-size:13.5px;color:var(--roj);margin-bottom:22px}
+  footer{color:var(--mut);font-size:12.5px;text-align:center;padding:30px 0 50px}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="wrap"><span class="brand">Bloque de llamadas</span></div></nav>
+
+<div class="wrap" style="padding-top:30px;padding-bottom:40px">
+  <h1>4 tratos que solo se destraban por teléfono</h1>
+  <p class="sub">2 horas, un solo día. En este orden. Son llamadas, no mensajes — los guiones van listos para leer en voz alta.</p>
+
+  <div class="aviso"><b>Total en juego: ~$1.410.000.</b> REGULPET va primero porque ya dijo "vale" al precio el 9 de agosto — es el más cerca de cerrar. Después MercadoVet (propuesta sin abrir), y al final los dos de Ley 21.719 a $490.000 cada uno.</div>
+
+  <div class="warn"><b>Ojo — Yoyistyle NO está en esta lista a propósito:</b> hay 3 montos distintos dando vueltas para ese trato y su número de WhatsApp registrado abre el chat de un desconocido. Antes de cobrarle hay que escuchar sus audios y confirmar el monto real. Eso lo haces tú a mano.</div>
+
+  <!-- 1 REGULPET -->
+  <div class="deal">
+    <h2>1) REGULPET — $140.000 · el más cerca de cerrar</h2>
+    <div class="meta">Teléfono directo (el WhatsApp está en loop de bot, no sirve escribir)</div>
+    <a class="tel" href="tel:+56989876272">Llamar +56 9 8987 6272</a>
+    <div class="ctx">El 9 de agosto salió del bot una persona real, preguntó el precio y cerró con "Vale" a las 13:39. La ficha gratis quedó prometida por escrito y se honra. Este trato solo falta cerrarlo: coordinar arranque y pago.</div>
+    <div class="msg" id="m1">Hola, ¿hablo con REGULPET? Te habla Mario Charlin.
+
+El 9 de agosto conversamos por WhatsApp sobre la ficha de Google y el sitio web — quedamos en $140.000 con la ficha de partida sin costo, y me dijiste "vale".
+
+Te llamo para coordinar el arranque: ¿lo partimos esta semana? Yo te mando los datos y en cuanto se confirma, partimos con todo.</div>
+    <button class="cbtn" onclick="cp('m1',this)">Copiar guion</button>
+  </div>
+
+  <!-- 2 MercadoVet -->
+  <div class="deal">
+    <h2>2) MercadoVet / Bastian — confirmar sí o no + monto</h2>
+    <div class="meta">Mismo teléfono que "Emprendimiento La Florida" — es la misma persona, llamar UNA vez</div>
+    <a class="tel" href="tel:+56966330180">Llamar +56 9 6633 0180</a>
+    <div class="ctx">Recibió la propuesta el 2 de agosto y no abrió los links. Hay montos distintos en juego según qué propuesta miró ($290.000 la escalera sitio+WhatsApp / $250.000 + 15% la de video con sesiones). La llamada es para una decisión directa: sí o no, y anotar el monto que se acuerde.</div>
+    <div class="msg" id="m2">Hola Bastian, te habla Mario Charlin.
+
+Te mandé la propuesta para MercadoVet y no sé si la alcanzaste a ver, así que prefiero preguntártela directo: ¿te interesa seguir con el proyecto o lo dejamos para más adelante?
+
+Si es que sí, te confirmo el monto acordado y partimos. Si es que no, quedamos bien igual.</div>
+    <button class="cbtn" onclick="cp('m2',this)">Copiar guion</button>
+  </div>
+
+  <!-- 3 Corp Premier -->
+  <div class="deal">
+    <h2>3) Corp Premier — $490.000 · Ley 21.719</h2>
+    <div class="meta">Entrar por conmutador y pedir gerencia general · RUT 76.473.108-5</div>
+    <a class="tel" href="tel:+56229520000">Llamar (2) 2952 0000</a>
+    <div class="ctx">399 órdenes de compra estatales (Carabineros, Ejército, salud, municipios). Sin área de compliance visible. Gancho: empresas que venden al Estado van a tener que demostrar cumplimiento de la nueva ley de datos. Ofrecer el diagnóstico sin costo.</div>
+    <div class="msg" id="m3">Hola, buenas tardes. ¿Me puede comunicar con la gerencia general?
+
+Habla Mario Charlin. Lo llamo porque su empresa aparece con cerca de 400 órdenes de compra al Estado — Carabineros, Ejército, municipios — y con la nueva ley de protección de datos las empresas que le venden al Estado van a tener que demostrar cumplimiento.
+
+Nosotros hacemos ese diagnóstico sin costo. ¿Le sirve que se lo cuente en dos minutos, o prefiere que le mande la información por correo?</div>
+    <button class="cbtn" onclick="cp('m3',this)">Copiar guion</button>
+  </div>
+
+  <!-- 4 Match Point -->
+  <div class="deal">
+    <h2>4) Match Point — $490.000 · Ley 21.719</h2>
+    <div class="meta">Pedir gerencia general · marca Grupo Point</div>
+    <a class="tel" href="tel:+56934424387">Llamar +56 9 3442 4387</a>
+    <div class="ctx">Arriendo de impresoras Canon, 14 contratos con el Estado confirmados, y hoy NO tienen política de privacidad publicada — eso es el gancho. Ofrecer diagnóstico sin costo de 30 minutos.</div>
+    <div class="msg" id="m4">Hola, ¿me comunico con gerencia general?
+
+Habla Mario Charlin. Lo llamo por algo concreto: su empresa tiene contratos con el Estado y, revisando, hoy no tienen política de privacidad publicada. Con la nueva ley de protección de datos eso se va a exigir.
+
+Ofrecemos un diagnóstico sin costo, de 30 minutos, para saber dónde están parados. ¿Le acomoda que le cuente en dos minutos ahora, o prefiere que agendemos?</div>
+    <button class="cbtn" onclick="cp('m4',this)">Copiar guion</button>
+  </div>
+
+</div>
+
+<footer>Privado · Mario Charlin · bloque de llamadas 21-sep-2026</footer>
+
+<script>
+  function cp(id, btn){
+    var t = document.getElementById(id).innerText;
+    var done = function(){
+      var o = btn.textContent; btn.textContent = '✓ Copiado';
+      btn.classList.add('ok');
+      setTimeout(function(){ btn.textContent = o; btn.classList.remove('ok'); }, 1900);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(done, function(){ fb(t, done); });
+    } else fb(t, done);
+  }
+  function fb(t, done){
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.style.position='fixed'; ta.style.opacity='0';
+    document.body.appendChild(ta); ta.focus(); ta.select();
+    try { document.execCommand('copy'); done(); } catch(e){ alert('Copia manualmente.'); }
+    document.body.removeChild(ta);
+  }
+</script>
+</body>
+</html>
